@@ -1,0 +1,17 @@
+{
+  "name": "ech.net",
+  "version": "1.0.0",
+  "description": "Dev server for ech.net site",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/EchNet/echnet.git"
+  },
+  "author": "James Echmalian",
+  "license": "ISC",
+  "homepage": "https://ech.net",
+  "dependencies": {
+    "express": "^4.17.1",
+    "morgan": "^1.10.0"
+  }
+}
