@@ -17,7 +17,7 @@
     <link rel="shortcut icon" href="img/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Wendy+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Wendy+One" rel="stylesheet">
   </head>
   <style>
     html, body {
@@ -25,10 +25,9 @@
       height: 100%;
     }
     body {
-      line-height: 1.30;
-      font-family: 'Wendy One', sans-serif;
-      font-weight: 300;
       background-color: #efefef;
+      font-family: Verdana, Arial, Helvetica, sans-serif;
+      font-weight: 300;
     }
     .content {
       width: 480px;
@@ -37,21 +36,49 @@
       border-radius: 12px;
       padding: 16px;
     }
+    section {
+      margin-top: 20px;
+    }
     .headline {
       font-size: 64px;
       color: white;
       text-align: center;
       letter-spacing: 0.02em;
+      line-height: 1.30;
+      font-family: 'Wendy One', sans-serif;
+      font-weight: 400;
     }
     .message {
-      margin-top: 2em;
       text-align: center;
-      font-size: 24px;
+      font-size: 28px;
+      font-family: 'Wendy One', sans-serif;
+      font-weight: 400;
     }
     footer {
       position: relative;
       height: 32px;
       width: 100%;
+    }
+    .text {
+      font-size: 14px;
+    }
+    .form form {
+      display: flex;
+      justify-content: center;
+    }
+    .form input, .form button {
+      font-size: 20px;
+    }
+    .form input {
+      border: solid 1px #666;
+      border-radius: 6px;
+      color: #555;
+      width: 300px;
+    }
+    li {
+      margin-top: 12px;
+      font-size: 14px;
+      font-style: italic;
     }
     .left {
       position: absolute;
@@ -62,6 +89,43 @@
       position: absolute;
       top: 0;
       right: 0;
+    }
+    .button-24 {
+      background: #FF4742;
+      border: 1px solid #FF4742;
+      border-radius: 6px;
+      box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+      box-sizing: border-box;
+      color: #FFFFFF;
+      cursor: pointer;
+      display: inline-block;
+      font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+      font-size: 16px;
+      font-weight: 800;
+      line-height: 16px;
+      min-height: 40px;
+      outline: 0;
+      padding: 12px 14px;
+      text-align: center;
+      text-rendering: geometricprecision;
+      text-transform: none;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      vertical-align: middle;
+    }
+    .button-24:hover,
+    .button-24:active {
+      background-color: initial;
+      background-position: 0 0;
+      color: #FF4742;
+    }
+    .button-24:active {
+      opacity: .5;
+    }
+    input::placeholder {
+      font-style: italic;
+      color: #ccc;
     }
   </style>
   <body>
@@ -76,7 +140,7 @@
                      background-color: blue">g</span><span
               style="padding-bottom: 0.1em;
                      background-color: blue">l</span><span
-              style="background-color: red;
+              style="background-color: #FF4742;
                      padding-left: 0.05em;
                      padding-right: 0.02em;
                      padding-bottom: 0.1em;"">i</span><span
@@ -86,7 +150,31 @@
                      padding-right: 0.1em;">talia</span>
       </section>
       <section class="message">
-        In arrivo...
+        Perfeziona il tuo inglese... iscriviti alla nostra mailing list!
+      </section>
+      <section class="form">
+        <form id="the-form">
+          <input type="email" required name="iscriviti" placeholder="Indirizzo e-mail"/>
+          <button class="button-24" role="button" style="margin-left: 3px">Iscriviti</button>
+        </form>
+      </section>
+      <section class="text">
+        <p>
+          Tre volte alla settimana riceverai un articolo nella tua casella di posta elettronica.
+        </p>
+        <p>
+          L'articolo riguarderà una breve spiegazione di una particolare espressione inglese e verrà integrata da molti esempi. Ogni esempio verrà tradotto in italiano per approfondirne la comprensione.
+        </p>
+        <p>
+          Le nostre promesse:
+        </p>
+        <ul>
+          <li>Il servizio sarà sempre gratuito.</li>
+          <li>È possibile disdire in qualsiasi momento.</li>
+          <li>I contenuti degli articoli sono rivolti a qualsiasi lettore di ogni età.</li>
+          <li>I contenuti delle e-mail saranno controllati al 100% - non vedrai annunci personalizzati nelle nostre e-mail.</li>
+          <li>Le lezioni saranno divertenti ed allegre!</li>
+        </ul>
       </section>
       <footer>
         <div class="left">
@@ -98,4 +186,14 @@
       </footer>
     </div>
   </body>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    var url = "https://7p76enfn7h.execute-api.us-east-1.amazonaws.com/dev/send";
+    $("#the-form").on("submit", function(e) {
+      e.preventDefault();
+      $.post(url, { email: $("#the-form input").val(), action: "register" }, function() {
+        alert("Inviato!");
+      })
+    });
+  </script>
 </html>
