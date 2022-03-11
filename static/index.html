@@ -23,6 +23,8 @@
     html, body {
       width: 100%;
       height: 100%;
+      margin: 0;
+      padding: 0;
     }
     body {
       background-color: #efefef;
@@ -30,7 +32,7 @@
       font-weight: 300;
     }
     .content {
-      width: 480px;
+      max-width: 480px;
       margin: 20px auto;
       background-color: white;
       border-radius: 12px;
@@ -50,7 +52,7 @@
     }
     .message {
       text-align: center;
-      font-size: 28px;
+      font-size: 24px;
       font-family: 'Wendy One', sans-serif;
       font-weight: 400;
     }
@@ -84,11 +86,21 @@
       position: absolute;
       top: 0;
       left: 0;
+      width: 30px;
+      height: 30px;
+      background-image: url("/img/amflag.png");
+      background-repeat: no-repeat;
+      background-size: 30px 30px;
     }
     .right {
       position: absolute;
       top: 0;
       right: 0;
+      width: 30px;
+      height: 30px;
+      background-image: url("/img/itflag.png");
+      background-repeat: no-repeat;
+      background-size: 30px 30px;
     }
     .button-24 {
       background: #FF4742;
@@ -127,27 +139,18 @@
       font-style: italic;
       color: #ccc;
     }
+    b {
+      font-weight: 550;
+      color: #33c;
+    }
   </style>
   <body>
     <div class="content">
       <section class="headline">
-        <span style="padding-left: 0.1em;
-                     padding-bottom: 0.1em;
-                     background-color: blue">e</span><span
-              style="padding-bottom: 0.1em;
-                     background-color: blue">n</span><span
-              style="padding-bottom: 0.1em;
-                     background-color: blue">g</span><span
-              style="padding-bottom: 0.1em;
-                     background-color: blue">l</span><span
-              style="background-color: #FF4742;
-                     padding-left: 0.05em;
-                     padding-right: 0.02em;
-                     padding-bottom: 0.1em;"">i</span><span
-              style="background-color: green;
-                     padding-left: 0.02em;
-                     padding-bottom: 0.1em;
-                     padding-right: 0.1em;">talia</span>
+        <img src="img/logo.png" height="72"/>
+      </section>
+      <section class="text">
+        Il nostro scopo è aiutare gli italiani che stanno studiando l'inglese e che vogliono diventare più bravi nell'ascoltare e nel parlare la lingua - non l'inglese idealizzato che impareresti da un corso, ma <b>la vera lingua parlata</b>.
       </section>
       <section class="message">
         Perfeziona il tuo inglese... iscriviti alla nostra mailing list!
@@ -160,29 +163,22 @@
       </section>
       <section class="text">
         <p>
-          Tre volte alla settimana riceverai un articolo nella tua casella di posta elettronica.
-        </p>
-        <p>
-          L'articolo riguarderà una breve spiegazione di una particolare espressione inglese e verrà integrata da molti esempi. Ogni esempio verrà tradotto in italiano per approfondirne la comprensione.
+          Ogni tanto riceverai un articolo nella tua casella di posta elettronica.
+          L'articolo riguarderà una breve spiegazione di una particolare espressione inglese e verrà integrata da molti esempi.
         </p>
         <p>
           Le nostre promesse:
         </p>
         <ul>
           <li>Il servizio sarà sempre gratuito.</li>
+          <li>Le lezioni saranno divertenti e allegre!</li>
+          <li>I contenuti degli articoli sono rivolti ai lettori di ogni età.</li>
           <li>È possibile disdire in qualsiasi momento.</li>
-          <li>I contenuti degli articoli sono rivolti a qualsiasi lettore di ogni età.</li>
-          <li>I contenuti delle e-mail saranno controllati al 100% - non vedrai annunci personalizzati nelle nostre e-mail.</li>
-          <li>Le lezioni saranno divertenti ed allegre!</li>
         </ul>
       </section>
       <footer>
-        <div class="left">
-          <img src="/img/amflag.png" width="32"/>
-        </div>
-        <div class="right">
-          <img src="/img/itflag.png" width="32"/>
-        </div>
+        <div class="left">&nbsp;</div>
+        <div class="right">&nbsp;</div>
       </footer>
     </div>
   </body>
