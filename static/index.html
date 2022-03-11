@@ -33,7 +33,7 @@
     }
     .content {
       max-width: 480px;
-      margin: 20px auto;
+      margin: 17px auto;
       background-color: white;
       border-radius: 12px;
       padding: 16px;
@@ -42,19 +42,12 @@
       margin-top: 20px;
     }
     .headline {
-      font-size: 64px;
-      color: white;
       text-align: center;
-      letter-spacing: 0.02em;
-      line-height: 1.30;
-      font-family: 'Wendy One', sans-serif;
-      font-weight: 400;
     }
     .message {
       text-align: center;
       font-size: 24px;
       font-family: 'Wendy One', sans-serif;
-      font-weight: 400;
     }
     footer {
       position: relative;
@@ -63,6 +56,7 @@
     }
     .text {
       font-size: 14px;
+      font-weight: 500;
     }
     .form form {
       display: flex;
@@ -78,7 +72,7 @@
       width: 300px;
     }
     li {
-      margin-top: 12px;
+      margin-top: 9px;
       font-size: 14px;
       font-style: italic;
     }
@@ -150,7 +144,7 @@
         <img src="img/logo.png" height="72"/>
       </section>
       <section class="text">
-        Il nostro scopo è aiutare gli italiani che stanno studiando l'inglese e che vogliono diventare più bravi nell'ascoltare e nel parlare la lingua - non l'inglese idealizzato che impareresti da un corso, ma <b>la vera lingua parlata</b>.
+        Aiutiamo gli italiani che stanno studiando l'inglese e che vogliono diventare più bravi nell'ascoltare e nel parlare la lingua - non l'inglese idealizzato che impareresti da un corso, ma <b>la vera lingua parlata</b>.
       </section>
       <section class="message">
         Perfeziona il tuo inglese... iscriviti alla nostra mailing list!
@@ -163,8 +157,8 @@
       </section>
       <section class="text">
         <p>
-          Ogni tanto riceverai un articolo nella tua casella di posta elettronica.
-          L'articolo riguarderà una breve spiegazione di una particolare espressione inglese e verrà integrata da molti esempi.
+          Ogni settimana riceverai un articolo nella tua casella di posta elettronica.
+          L'articolo riguarderà una spiegazione di una particolare espressione inglese che verrà integrata da molti esempi.
         </p>
         <p>
           Le nostre promesse:
@@ -184,12 +178,15 @@
   </body>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript">
-    var url = "https://7p76enfn7h.execute-api.us-east-1.amazonaws.com/dev/send";
-    $("#the-form").on("submit", function(e) {
-      e.preventDefault();
-      $.post(url, { email: $("#the-form input").val(), action: "register" }, function() {
-        alert("Inviato!");
-      })
+    $(function() {
+      var url = "https://7p76enfn7h.execute-api.us-east-1.amazonaws.com/dev/send";
+      $("#the-form").on("submit", function(e) {
+        e.preventDefault();
+        $.post(url, { email: $("#the-form input").val(), action: "register" }, function() {
+          alert("Inviato!");
+        })
+      });
+      $("#the-form input").focus();
     });
   </script>
 </html>
