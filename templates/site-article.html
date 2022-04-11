@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>englitalia - {{article.subject}}</title>
+    <meta charset="utf-8" />
+    {% if article.meta_description %}
+      <meta name="description" content="{{article.meta_description}}">
+    {% endif %}
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="author" content="englitalia">
+    <meta name="theme-color" content="#ffffff">
+    {% include "site-header-links.html" %}
+  </head>
+  <body>
+    <div class="content">
+      <div class="icon-nav" style="font-size:32px; display:flex; justify-content:space-between;">
+        <div>{% if prev_article %}<a href="{{prev_article.url}}">&xlarr;</a>{% else %}&nbsp;{% endif %}</div>
+        <div>{% if next_article %}<a href="{{next_article.url}}">&xrarr;</a>{% else %}&nbsp;{% endif %}</div>
+      </div>
+      {{article.content}}
+      <div class="icon-nav" style="font-size:32px; display:flex; justify-content:space-between;">
+        <div>{% if prev_article %}<a href="{{prev_article.url}}">&xlarr;</a>{% else %}&nbsp;{% endif %}</div>
+        <div>{% if next_article %}<a href="{{next_article.url}}">&xrarr;</a>{% else %}&nbsp;{% endif %}</div>
+      </div>
+    </div>
+  </body>
+</html>

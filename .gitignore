@@ -1,15 +1,20 @@
+devsetup
+built/
+*.swp
+
+# Python/Django
+requirements.flag
+__pycache__/
+.env
+venv/
+*.py[cod]
+
 # Node/ReactJS
-build/
 node_modules/
-coverage
-stats.json
 npm-debug.log
 
 # Not sure
-dist/
 .cache/
 
-# Other apps.
+# Mac
 .DS_Store
-.idea
-*.swp

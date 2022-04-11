@@ -1,0 +1,13 @@
+{% extends "articlebase.html" %}
+{% block content %}
+  <div class="title-div">{% block title %}{% endblock title %}</div>
+  <div class="article-body-div">{% block article-body %}{% endblock article-body %}</div>
+  <div class="logo-div">
+    <div style="text-align:center;">
+      <a href="{{home_url}}" target="_blank">
+        <img height="68" border=0 src="http://englitalia.us/img/logo.png" />
+      </a>
+    </div>
+  </div>
+  <div class="credits-div">{% block credits %}{% endblock credits %}</div>
+{% endblock content %}

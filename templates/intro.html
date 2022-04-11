@@ -1,0 +1,22 @@
+{% extends "email/base.html" %}
+{% block subject %}Thank you for subscribing{% endblock subject %}
+{% block content %}
+  <div style="width:100%;margin-top:12px;text-align:center">
+    <img height="68" src="http://englitalia.us/img/logo.png" />
+  </div>
+  <div style="font-weight:600;font-size:24px;margin-top:20px;text-align:center;color:#338">
+    Welcome to our mailing list!
+  </div>
+  <div style="font-size:14px;margin-top:14px">
+    Riceverai presto il primo articolo via email!
+  </div>
+  <div style="font-size:14px;margin-top:14px">
+    Dai un'occhiata al nostro sito web: <a style="color:#b95" href="http://englitalia.us">englitalia.us</a>
+  </div>
+  <div style="font-size:14px;margin-top:24px">
+    Cheers!  &#127881;
+  </div>
+  <div style="font-weight:550;font-size:14px;margin-top:14px;color:#338">
+    The Englitalia Team
+  </div>
+{% endblock content %}

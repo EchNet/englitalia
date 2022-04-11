@@ -6,7 +6,7 @@ const INDEX = '/index.html';
 
 const server = express()
   .use(morgan("tiny"))
-  .use(express.static("./static"))
+  .use(express.static("./built"))
   .get("/", (req, res) => {
     res.redirect("/index.html")
   })

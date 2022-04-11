@@ -1,0 +1,48 @@
+{% if render_subject %}
+  {% block subject %}
+  {% endblock subject %}
+{% else %}
+  <div style="margin:0px;min-width:100%;padding:0px;width:100%;background-color:rgb(255,255,255);color:rgb(0,0,0);font-family:Helvetica,Arial,Verdana,sans-serif">
+    <div style="background:#f8f8f8;margin-left:auto;margin-right:auto;max-width:1000px;padding:15px;">
+      <div style="padding:8px;background:white;overflow:hidden;zoom:1;border-radius:5px;max-width:500px;margin:auto auto 20px;">
+        <div>
+          <html>
+            <head>
+              <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+              <style type="text/css">
+                ol{margin:0;padding:0}table td,table th{padding:0}.c1{padding-top:0pt;text-indent:36pt;padding-bottom:0pt;line-height:1.15;orphans:2;widows:2;text-align:left;height:11pt}.c0{color:#38761d;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Arial";font-style:normal}.c5{padding-top:0pt;margin-left:24pt;padding-bottom:0pt;line-height:1.15;orphans:2;widows:2;text-align:left}.c2{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Arial";font-style:normal}.c3{color:#0000ff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Arial";font-style:normal}.c4{padding-top:0pt;padding-bottom:0pt;line-height:1.15;orphans:2;widows:2;text-align:left;height:11pt}.c6{color:#6aa84f;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Arial";font-style:normal}.c12{color:#434343;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:18pt;font-family:"Arial";font-style:normal}.c7{padding-top:0pt;padding-bottom:0pt;line-height:1.15;orphans:2;widows:2;text-align:left}.c8{background-color:#ffffff;}.c10{color:#0000ff}.c11{margin-left:24pt}.title{padding-top:0pt;color:#000000;font-size:26pt;padding-bottom:3pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}.subtitle{padding-top:0pt;color:#666666;font-size:15pt;padding-bottom:16pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}li{color:#000000;font-size:11pt;font-family:"Arial"}
+                p {margin: 15px 0;color:#000000;font-size:11pt;font-family:"Arial"}
+                table, tr, tbody, td {color:#000000;font-size:11pt;font-family:"Arial"}
+                .indented {padding-left:35px;}
+                h1{margin:10px 0 30px;text-align:center;color:#886677;font-size:20pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2}
+                a[href] {
+                  color: #bf8200;
+                  text-decoration: none;
+                }
+                a[href]:hover {
+                  color: #dcb840;
+                  text-decoration: underline;
+                }
+                .logo-div {
+                  width:100%;
+                  margin-top:32px;
+                  text-align:center"
+                }
+              </style>
+            </head>
+            <body class="c8">
+              {% block title %}{% endblock title %}
+              {% block article-body %}{% endblock article-body %}
+              <div style="width:100%;margin-top:32px;text-align:center">
+                <a href="http://englitalia.us" target="_blank">
+                  <img height="68" border=0 src="http://englitalia.us/img/logo.png" />
+                </a>
+              </div>
+              {% block credits %}{% endblock credits %}
+            </body>
+          </html>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endif %}
