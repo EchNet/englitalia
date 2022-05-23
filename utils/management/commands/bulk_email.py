@@ -18,6 +18,7 @@ MAILING_LIST = [
     "lidiabonata@hotmail.com",
     "merhpoo@me.com",
     "m.danielapoli@gmail.com",
+    "laurabiolcati@gmail.com",
     "massimomalavasi1972@gmail.com",
     "Gabry_9it@yahoo.it",
     "konitzlee@yahoo.it",
